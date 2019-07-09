@@ -5,8 +5,9 @@
 
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://github.com/openembedded" name="oe"/>
-
+  
   <project remote="yocto" revision="warrior" name="poky" path="yocto/poky"/>
   <project remote="oe" revision="warrior" name="meta-openembedded" path="oe/meta-openembedded"/>
+  <project remote="yocto" revision="warrior" name="meta-raspberrypi" path="yocto/poky/meta-raspberrypi"/>
 
 </manifest>
