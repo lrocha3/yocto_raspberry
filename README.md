@@ -1,27 +1,30 @@
 # yocto_raspberry
 
 ##Initialize the repo
-1 - mkdir repo
-2 - cd repo
-3 - Initialiye repo:
-4 - repo init -u https://github.com/lrocha3/yocto_raspberry.git
-5 - repo sync
+1 - cd /home/luigi/Documents/
+2 - mkdir repo
+3 - cd repo
+4 - Initialiye repo:
+5 - repo init -u https://github.com/lrocha3/yocto_raspberry.git
+6 - repo sync
 
 ##Initialize poky bblayers
-1 - cd poky
-2 - source oe-init-build-env ../build
-3 - go to build/conf/local.conf and change the machine to MACHINE ?= "raspberrypi2"
-4 - go to build/bblayers.conf/ and add the following
+1   - cd /home/luigi/Documents/repo/poky
+2   - source oe-init-build-env ../build
+3   - Open any File Explorer and navigate to /home/luigi/Documents/repo/build/conf
+4   - change the local.conf and change the machine to:
+4.1 - MACHINE ?= "raspberrypi2"
+5   - change the bblayers.conf and add the following
 4.1- BBLAYERS ?= " \
-	  /home/luigi/raspberry_yocto/poky/meta \
-	  /home/luigi/raspberry_yocto/poky/meta-poky \
-	  /home/luigi/raspberry_yocto/poky/meta-yocto-bsp \
-	  /home/luigi/raspberry_yocto/poky/meta-openembedded/meta-oe \
-	  /home/luigi/raspberry_yocto/poky/meta-openembedded/meta-multimedia \
-	  /home/luigi/raspberry_yocto/poky/meta-openembedded/meta-networking \
-	  /home/luigi/raspberry_yocto/poky/meta-openembedded/meta-python \
-	  /home/luigi/raspberry_yocto/poky/meta-raspberrypi \
-	  "
+	/home/luigi/Documents/repo/poky/meta \
+	/home/luigi/Documents/repo/poky/meta-poky \
+	/home/luigi/Documents/repo/poky/meta-yocto-bsp \
+	/home/luigi/Documents/repo/meta-openembedded/meta-oe \
+	/home/luigi/Documents/repo/meta-openembedded/meta-multimedia \
+	/home/luigi/Documents/repo/meta-openembedded/meta-networking \
+	/home/luigi/Documents/repo/meta-openembedded/meta-python \
+	/home/luigi/Documents/repo/meta-raspberrypi \
+"
 
 ##Bitbake the image
 1 -bitbake -k core-image-minimal
