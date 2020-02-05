@@ -1,7 +1,11 @@
 # yocto_raspberry
 
 ##Initialize the repo
-1 - repo init -u https://github.com/lrocha3/yocto_raspberry.git
+1 - mkdir repo
+2 - cd repo
+3 - Initialiye repo:
+4 - repo init -u https://github.com/lrocha3/yocto_raspberry.git
+5 - repo sync
 
 ##Initialize poky bblayers
 1 - cd poky
