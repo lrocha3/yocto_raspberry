@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <default sync-j="4" revision="warrior"/>
+  <default sync-j="8" revision="dunfell"/>
 
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://github.com/openembedded" name="oe"/>
-  
-  <project remote="yocto" revision="warrior" name="poky" path="poky"/>
-  <project remote="oe" revision="warrior" name="meta-openembedded" path="meta-openembedded"/>
-  <project remote="yocto" revision="warrior" name="meta-raspberrypi" path="meta-raspberrypi"/>
+  <remote fetch="https://github.com/lrocha3" name="configuration"/>
+    
+  <project remote="yocto" revision="dunfell" name="poky" path="poky"/>
+  <project remote="oe" revision="dunfell" name="meta-openembedded" path="meta-openembedded"/>
+  <project remote="yocto" revision="dunfell" name="meta-raspberrypi" path="meta-raspberrypi"/>
+  <project remote="configuration" revision="master" name="raspberrypi2_yocto_conf" path="build/conf"/>
 
 </manifest>
