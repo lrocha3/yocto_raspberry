@@ -15,7 +15,7 @@ cd /home/luigi/Documents/repo_yocto/poky
 source oe-init-build-env ../build
 ```
 
-## Configure the local.conf
+## Configure the local.conf [Not needed since the local.conf is now pulled via repo manifest]
 ```
 gedit /home/luigi/Documents/repo/build/conf/local.conf
 Set the target:
@@ -25,7 +25,7 @@ Set the number of threads and parallel make parameters
   - PARALLEL_MAKE = "-j 8"
 ```
 
-## Configure the bblayers.conf
+## Configure the bblayers.conf [Not needed since the bblayers.conf is now pulled via repo manifest]
 ```
 gedit /home/luigi/Documents/repo/build/conf/bblayers.conf
 Set the BBLAYERS:
